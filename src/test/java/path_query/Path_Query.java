@@ -19,6 +19,5 @@ public class Path_Query {
                 .statusCode(200)
                 .log().all();
 
-
     }
 }
