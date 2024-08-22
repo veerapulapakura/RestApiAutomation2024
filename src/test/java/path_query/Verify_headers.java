@@ -6,6 +6,7 @@ import io.restassured.http.Headers;
 import io.restassured.response.Response;
 
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
@@ -41,6 +42,10 @@ public class Verify_headers {
             System.out.println(" Printing "+Head.getName()+ "     -------    "+Head.getValue());
 
         }
+
+        // Asserting the header information from response.
+        Assert.assertEquals(res.statusCode(),200);
+        Assert.assertEquals(res.getHeader("Content-Type"),"text/html; charset=ISO-8859-1");
 
     }
     }
