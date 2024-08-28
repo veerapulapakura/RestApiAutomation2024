@@ -56,7 +56,7 @@ public void Authentication(){
     @Test(priority =3)
     public void BearerTokenAuthentication()
     {
-        String token="";
+        //String token="";
         given()
                 .headers("Authorization", "Bearer "+token)
                 .when()
