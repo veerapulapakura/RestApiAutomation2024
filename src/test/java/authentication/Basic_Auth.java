@@ -56,7 +56,7 @@ public void Authentication(){
     @Test(priority =3)
     public void BearerTokenAuthentication()
     {
-        //String token = "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";
+        String token="";
         given()
                 .headers("Authorization", "Bearer "+token)
                 .when()
