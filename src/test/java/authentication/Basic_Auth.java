@@ -20,7 +20,6 @@ public void Authentication(){
             .statusCode(200)
             .body("authenticated",equalTo(true))
             .log().all();
-            //Assert.assertEquals(res.getStatusCode(), 200);
 }
 
     @Test(priority =2)
@@ -34,7 +33,6 @@ public void Authentication(){
                 .statusCode(200)
                 .body("authenticated",equalTo(true))
                 .log().all();
-        //Assert.assertEquals(res.getStatusCode(), 200);
     }
 
 
@@ -49,16 +47,14 @@ public void Authentication(){
                 .statusCode(200)
                 .body("authenticated",equalTo(true))
                 .log().all();
-        //Assert.assertEquals(res.getStatusCode(), 200);
     }
 
 
     @Test(priority =3)
     public void BearerTokenAuthentication()
     {
-        //String token="";
         given()
-                .headers("Authorization", "Bearer "+token)
+                .headers("Authorization", "Bearer ")
                 .when()
                 .get("https://api.github.com/user/repos")
                 .then()
