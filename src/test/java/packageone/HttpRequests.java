@@ -67,7 +67,7 @@ public class HttpRequests {
 
         HashMap data = new HashMap();
         data.put("name", "RatnaKumar1");
-        data.put("Job", "Computers");
+        data.put("Job", "ComputersSection");
 
                  given()
                 .contentType("application/json")
